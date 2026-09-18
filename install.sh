@@ -41,28 +41,6 @@ for v in ${MAS_IDS[@]}; do
 done
 
 # =====================================
-# 3. フォントを導入
-# =====================================
-# ~/tmp-{yyyyMMddHHmmss}-{0〜32767の乱数}
-export TMP_DIR="$HOME/tmp-$(date +'%Y%m%d%H%M%S')-$RANDOM"
-mkdir -p "$TMP_DIR"
-
-# fontを入れる 三角のやつ
-cd $TMP_DIR
-git clone --depth 1 https://github.com/powerline/fonts.git
-cd fonts
-./install.sh
-
-# fontを入れる icon系
-cd $TMP_DIR
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts
-./install.sh
-
-# 削除
-rm -rf $TMP_DIR
-
-# =====================================
 # 3. Mac固有設定
 # =====================================
 # Finderのキルを有効化
